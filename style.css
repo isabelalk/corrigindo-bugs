@@ -1,0 +1,84 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin: 0;
+  font-style: normal;
+
+  max-width: 100dvw; /*100% dynamic viewport width (tamanho max da largura da tela do usuario) (cada tela tem uma larguta especifica entao nao da pra botar valor exato tipo 500px, nada garante que a tela do cara tenha 300px de largura)*/
+  height: 100vh;  /*100% viewport height (100% tamanho max da tela do cara)*/
+  overflow-y: auto; /*o nome é autodescritivo, se ultrapassar a altura maxima(Y) ele adiciona a barrinha de scrollar a pagina pra baixo, caso nao ultrapasse ele nao adiciona, por isso AUTO*/
+  overflow-x: hidden; /* se ultrapassar a largura maxima eu nao quero a barrinha de scroll horizontal, entao eu nao mostro, por isso HIDDEN*/
+
+  display: flex;   /*chama flex-box esses 4 aqui (esse e os 3 de baixo), justify content e align items no centro, autoexplicativo, por default o flex-direction é row(em linha, um do lado do outro horizontal), column pra fiacar 1 de baixo do outro, exemplo:*/
+  /*
+  Se tiver flex-direction column, o primeiro flex item fica em cima
+  do segundo, o segundo fica em cima do terceiro e assim por diante,
+
+
+  Se voce trocar pra row (que é o padrao, ou seja, se nao colocar nada no flex-direction ele é row)
+  o primeiro flex item fica do lado (esquerdo) do segundo, que fica ao lado esquerdo do terceiro e assim
+  por diante ...
+
+  Existe o row-reverse, e o column-reverse, auto explicativos...
+
+  <div styles="display: flex; flex-direction: column;">
+    <div></div> //flex-item  // Cada tag (abre e fecha), dentro da div pai que é display flex, é como se fosse um item flex, logo:
+    <div></div> //flex-item
+    ....
+  </div>
+
+  */
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}
+
+#hero {
+  width: 592px;
+  height: 579px;
+  margin: 0 auto;
+
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  /* mesma explicacao*/
+}
+
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 49px;
+  font-weight: normal;
+  margin: 72px auto 32px;
+}
+
+span, a {
+  color: #FF9900;
+}
+
+p, #footer {
+  color: #7d7987;
+  font-size: 14px;
+}
+
+#footer {
+  /* margin: 72px auto 33px; */
+  width: 568px;
+  margin-top: auto; /*margin-top auto significa: eu quero o maximo possivel de margem entre esse elemento e elemento de cima, logo, se o pai dos 2 ocupar a tela inteira, o primeiro filho ocupar metade e o segundo ocupar tipo 10% da altura restante eles vao ficar grudados, se voce colocar magin top ele vai la pro final do elemento pai... veja o bloco em laranja, é a margin que foi aplicada*/
+}
+#footer a + a {
+    margin-left: 28px;
+}
+
+#line {
+  height: 0;
+  margin: 0 8px;
+  border: 1px solid #ECEFF2;
+}
+
+#balls {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
